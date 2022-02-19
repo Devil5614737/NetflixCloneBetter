@@ -1,0 +1,91 @@
+.main{
+    width: 100vw;
+    height: 100vh;
+    background: url('https://assets.nflxext.com/ffe/siteui/vlv3/eb482c64-e879-4e88-9ddc-d839cb7d1232/d03a05fb-39a4-4594-b16c-ddc39f35f5bd/IN-en-20220131-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+    background-size: cover;
+    background-position: center;
+    @media screen and (max-width:740px) {
+        background: none;
+        background-color: black;
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.7);
+        z-index: 1;
+      }
+    .main-container{
+        position: relative;
+        z-index: 2;
+        padding: 2em 2em;
+     
+        .logo{
+            img{
+                height: 60px;
+                object-fit: contain;
+                @media screen and (max-width:740px) {
+                height: 30px;
+                }
+            }
+        }
+        .login-card{
+            background-color: rgba(0,0,0,.5);
+                width: 400px;
+                height: 400px;
+                margin: 40px auto;
+                padding: 2em 3em;
+                @media screen and (max-width:740px) {
+                    width: 100%;
+                    padding: 0em 2em;
+                }
+            p{
+                color: white;
+                font-weight: 600;
+                font-size: 3.2rem;
+            }
+            .input-container{
+                margin-top: 42px;
+                .login-input{
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    border-radius: 5px;
+                    border: none;
+                    margin-bottom: 16px;
+                    font-size: 1.6rem;
+                    padding-left: .4em;
+                    background-color: #333333;
+                    color: white;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                .login-btn{
+                    background-color: #e50914;
+                    border: none;
+                    width: 100%;
+                    height: 50px;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 1.6rem;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    margin-top: 22px;
+                }
+                .signup-link{
+                    font-size: 2rem;
+                    margin-top: 6px;
+                    font-weight: 500;
+                    color: #4f4f4f;
+                    span{
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
